@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Fonts } from "@/lib/fonts";
 import "../styles/globals.css";
+import { cn } from "@/utils/cn";
+import { ImAppleinc } from "react-icons/im";
+import { BiLogoApple } from "react-icons/bi";
+import { MdWindow } from "react-icons/md";
+import { IoLogoWindows } from "react-icons/io5";
+import { TbBrandWindowsFilled } from "react-icons/tb";
 
 export const metadata: Metadata = {
   title: "OS Portfolio – Emmanuel Odewale",
@@ -14,6 +20,8 @@ export const metadata: Metadata = {
     "portfolio",
     "web developer",
     "Emmanuel Odewale",
+    "Odewale Emmanuel",
+    "odewale_mdee",
     "software engineer",
     "frontend",
     "backend",
@@ -30,7 +38,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Fonts.geistSans} ${Fonts.geistMono} antialiased`}>
+      <body
+        className={cn(
+          Fonts.geistSans.className,
+          Fonts.geistMono.className,
+          Fonts.prompt.className,
+          Fonts.inter.className,
+          Fonts.roboto.className,
+          "antialiased"
+        )}
+      >
         {children}
       </body>
     </html>
